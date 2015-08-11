@@ -39,7 +39,7 @@ end
 # HTTP/HTTPS を通す
 firewall_rule 'http/https' do
     protocol :tcp
-    ports    [80, 443]
+    port    [80, 443]
     action   :allow
     notifies :enable, "firewall[ufw]"
 end
